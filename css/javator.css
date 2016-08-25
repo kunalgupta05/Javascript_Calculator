@@ -1,3 +1,33 @@
 body {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: antiquewhite;
+}
+
+.calculator_container {
+  position: relative;
+  z-index: 1;
+  height: 420px;
+  width: 300px;
+  background-color: #1b1919;
+}
+
+.calculator_container:before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  height: 147px;
+  width: 300px;
+  background-color: #ff1308;
+}
+
+.calculator_functions {
+  padding-top: 147px;
 }

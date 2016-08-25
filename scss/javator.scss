@@ -1,4 +1,27 @@
-@import "reset";
 @import "variables";
 @import "mixins";
 
+body{
+    @include CenterWithFlex;
+    background-color: antiquewhite;
+}
+
+.calculator_container{
+    position: relative;
+    z-index: 1;
+    height: $calc_height;
+    width: $calc_width;
+    background-color: $lightblack;
+    &:before{
+        position: absolute;
+        z-index:-1;
+        content: "";
+        height: 0.35*$calc_height;
+        width: $calc_width;
+        background-color: $reddishOrange;
+    }
+}
+
+.calculator_functions{
+    padding-top: 0.35*$calc_height;
+}
