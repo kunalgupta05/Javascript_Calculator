@@ -25,3 +25,8 @@ body{
 .calculator_functions{
     padding-top: 0.35*$calc_height;
 }
+
+.first_row_operators,.second_row_operators,.third_row_operators,.fourth_row_operators{
+    @include row_operators_design;    
+}
+

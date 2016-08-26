@@ -5,3 +5,11 @@
     align-items: center;
     justify-content: center;
 }
+
+@mixin row_operators_design{
+    @include CenterWithFlex;
+    height:($calc_height - 0.35*$calc_height)/4;
+    justify-content: space-around;
+    color: white;
+    font-size: large;
+}
