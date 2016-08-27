@@ -11,5 +11,24 @@
     height:($calc_height - 0.35*$calc_height)/4;
     justify-content: space-around;
     color: white;
-    font-size: large;
+    font-size: large;    
+}
+
+@mixin operators_styles($bgColor){
+    background-color:$bgColor;
+    border-radius: 50%;
+    width:30px;
+    height: 30px;
+    cursor:pointer;
+    span{
+        position: relative;
+        top: 2px;
+        left:9px;
+    }
+}
+
+@mixin lighten_background($bgColor){
+     &:hover,&:focus{
+           background-color: lighten($bgColor,10%);
+     }  
 }

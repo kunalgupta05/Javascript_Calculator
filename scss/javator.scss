@@ -12,6 +12,7 @@ body{
     height: $calc_height;
     width: $calc_width;
     background-color: $lightblack;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.7);
     &:before{
         position: absolute;
         z-index:-1;
@@ -26,7 +27,56 @@ body{
     padding-top: 0.35*$calc_height;
 }
 
+
 .first_row_operators,.second_row_operators,.third_row_operators,.fourth_row_operators{
-    @include row_operators_design;    
+    @include row_operators_design;
+    
+    &:last-child{
+        background-color: gray;
+    }
+    
+    .operators{
+       @include operators_styles($lightblack);
+       @include lighten_background($lightblack);
+    }
+    
+    .equals{        
+       @include operators_styles($lightgreen);
+       @include lighten_background($lightgreen);      
+    }
+    
+    .delete{        
+        position: relative;
+        background-color: $lightblack;
+        width:30px;
+        cursor:pointer;
+        &:before{            
+            position: absolute;
+            content: "";
+            right: 100%;
+            top:0px;
+            width:0px;
+            height:0px;
+            border-top:10px solid transparent;
+            border-right:10px solid $lightblack;
+            border-bottom:15px solid transparent;
+        }
+        span{
+            position: relative;
+            left:10px;
+        }        
+    }          
 }
+
+.fourth_row_operators{
+    .operators{
+        @include operators_styles(gray); 
+        @include lighten_background(gray);
+    }
+}
+
+
+
+
+
 
