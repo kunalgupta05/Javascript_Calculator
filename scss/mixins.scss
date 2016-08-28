@@ -20,15 +20,16 @@
     width:30px;
     height: 30px;
     cursor:pointer;
-    span{
+    @include CenterWithFlex;
+    /*span{
         position: relative;
         top: 2px;
         left:9px;
-    }
+    }*/
 }
 
 @mixin lighten_background($bgColor){
-     &:hover,&:focus{
+     &:hover{
            background-color: lighten($bgColor,10%);
      }  
 }

@@ -61,15 +61,23 @@ body {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*span{
+        position: relative;
+        top: 2px;
+        left:9px;
+    }*/
 }
 
-.first_row_operators .operators span, .second_row_operators .operators span, .third_row_operators .operators span, .fourth_row_operators .operators span {
-  position: relative;
-  top: 2px;
-  left: 9px;
-}
-
-.first_row_operators .operators:hover, .first_row_operators .operators:focus, .second_row_operators .operators:hover, .second_row_operators .operators:focus, .third_row_operators .operators:hover, .third_row_operators .operators:focus, .fourth_row_operators .operators:hover, .fourth_row_operators .operators:focus {
+.first_row_operators .operators:hover, .second_row_operators .operators:hover, .third_row_operators .operators:hover, .fourth_row_operators .operators:hover {
   background-color: #353232;
 }
 
@@ -79,15 +87,23 @@ body {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*span{
+        position: relative;
+        top: 2px;
+        left:9px;
+    }*/
 }
 
-.first_row_operators .equals span, .second_row_operators .equals span, .third_row_operators .equals span, .fourth_row_operators .equals span {
-  position: relative;
-  top: 2px;
-  left: 9px;
-}
-
-.first_row_operators .equals:hover, .first_row_operators .equals:focus, .second_row_operators .equals:hover, .second_row_operators .equals:focus, .third_row_operators .equals:hover, .third_row_operators .equals:focus, .fourth_row_operators .equals:hover, .fourth_row_operators .equals:focus {
+.first_row_operators .equals:hover, .second_row_operators .equals:hover, .third_row_operators .equals:hover, .fourth_row_operators .equals:hover {
   background-color: #08e608;
 }
 
@@ -121,14 +137,22 @@ body {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*span{
+        position: relative;
+        top: 2px;
+        left:9px;
+    }*/
 }
 
-.fourth_row_operators .operators span {
-  position: relative;
-  top: 2px;
-  left: 9px;
-}
-
-.fourth_row_operators .operators:hover, .fourth_row_operators .operators:focus {
+.fourth_row_operators .operators:hover {
   background-color: #9a9a9a;
 }
