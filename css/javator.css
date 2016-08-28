@@ -12,6 +12,7 @@ body {
 }
 
 .calculator_container {
+  overflow: hidden;
   position: relative;
   z-index: 1;
   height: 420px;
@@ -29,8 +30,31 @@ body {
   background-color: #ff1308;
 }
 
-.calculator_functions {
-  padding-top: 147px;
+.calculator_display_result {
+  height: 147px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  padding-right: 10px;
+}
+
+.equation {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+result {
+  font-weight: bold;
 }
 
 .first_row_operators, .second_row_operators, .third_row_operators, .fourth_row_operators {
@@ -58,8 +82,8 @@ body {
 .first_row_operators .operators, .second_row_operators .operators, .third_row_operators .operators, .fourth_row_operators .operators {
   background-color: #1b1919;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -84,8 +108,8 @@ body {
 .first_row_operators .equals, .second_row_operators .equals, .third_row_operators .equals, .fourth_row_operators .equals {
   background-color: #06b506;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -112,12 +136,13 @@ body {
   background-color: #1b1919;
   width: 30px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .first_row_operators .delete:before, .second_row_operators .delete:before, .third_row_operators .delete:before, .fourth_row_operators .delete:before {
   position: absolute;
   content: "";
-  right: 100%;
+  right: 95%;
   top: 0px;
   width: 0px;
   height: 0px;
@@ -134,8 +159,8 @@ body {
 .fourth_row_operators .operators {
   background-color: gray;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   display: -webkit-flex;
   display: -ms-flexbox;

@@ -7,6 +7,7 @@ body{
 }
 
 .calculator_container{
+    overflow: hidden;
     position: relative;
     z-index: 1;
     height: $calc_height;
@@ -23,10 +24,24 @@ body{
     }
 }
 
-.calculator_functions{
-    padding-top: 0.35*$calc_height;
+.calculator_display_result{
+    height:0.35*$calc_height;    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    color:white;
+    padding-right: 10px;    
 }
 
+.equation{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+result{
+    font-weight: bold;
+}
 
 .first_row_operators,.second_row_operators,.third_row_operators,.fourth_row_operators{
     @include row_operators_design;
@@ -50,10 +65,11 @@ body{
         background-color: $lightblack;
         width:30px;
         cursor:pointer;
+        margin-left: 10px;
         &:before{            
             position: absolute;
             content: "";
-            right: 100%;
+            right: 95%;
             top:0px;
             width:0px;
             height:0px;
