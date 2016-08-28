@@ -13,12 +13,24 @@ $(document).ready(function(){
             $('.equation').append($(this).find('span').text());         
         }       
         
+        evaluateExpression();
+        
     });
       
-    //Evaluate the expression when the  user clicks on the equals operator.
+    $('.delete').on('click',function(){
+        $('.equation').html('');
+        $('.result').html(''); 
+    });  
+      
+    //call the evaluateExpression function when the user clicks on the equals operator.
     $('.equals').on('click',function(){
-               
-        var result=eval($('.equation').html());
-        $('.result').text(result);
+        evaluateExpression();              
     })
+    
+    //Function which does the magic of evaluating the expression the user types in
+    function evaluateExpression(){
+        var result=eval($('.equation').html());
+        $('.result').text(result); 
+    }
+    
 })
