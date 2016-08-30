@@ -53,7 +53,8 @@ body {
   font-weight: bold;
 }
 
-result {
+.result {
+  font-size: large;
   font-weight: bold;
 }
 
@@ -137,6 +138,9 @@ result {
   width: 30px;
   cursor: pointer;
   margin-left: 10px;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
 }
 
 .first_row_operators .delete:before, .second_row_operators .delete:before, .third_row_operators .delete:before, .fourth_row_operators .delete:before {
@@ -149,6 +153,12 @@ result {
   border-top: 10px solid transparent;
   border-right: 10px solid #1b1919;
   border-bottom: 15px solid transparent;
+}
+
+.first_row_operators .delete:hover, .second_row_operators .delete:hover, .third_row_operators .delete:hover, .fourth_row_operators .delete:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .first_row_operators .delete span, .second_row_operators .delete span, .third_row_operators .delete span, .fourth_row_operators .delete span {

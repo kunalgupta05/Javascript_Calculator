@@ -13,8 +13,8 @@ $(document).ready(function () {
     }
 
     //Append the text to calculator_result_display except for delete and equals signs. 
-    $('.operators').on('click', function () {
-
+    $('.operators').on('click', function () {                
+        
         if ($(this).find('span').hasClass('multiply')) {
             operatorCount++;
             checkOperand("*");
@@ -27,38 +27,47 @@ $(document).ready(function () {
             operatorCount++;
             checkOperand("+");
         }
-        else {            
+        else {
             operand = true;
             if ($(this).find('span').hasClass('subtract')) {
                 operatorCount++;
                 checkOperand("-");
             }
-            else{
-               operatorCount = 0;
-               $('.equation').append($(this).find('span').text());    
-            }            
+            else {
+                operatorCount = 0;
+                $('.equation').append($(this).find('span').text());
+            }
         }
 
         evaluateExpression();
 
     });
 
-    $('.delete').on('click', function () {
+    $('.delete').on('click', function () {       
         operatorCount = 0;
         operand = false;
-        $('.equation').html('');
-        $('.result').html('');
+        $('.equation').html('').show();
+        $('.result').html('').css('font-size','large');
     });
 
     //call the evaluateExpression function when the user clicks on the equals operator.
     $('.equals').on('click', function () {
-        evaluateExpression();
+        $('.equation').html("").hide();        
+        $('.result').css('font-size','x-large');
     })
 
     //Function which does the magic of evaluating the expression the user types in
     function evaluateExpression() {
-        var result = eval($('.equation').html());
-        $('.result').text(result);
+
+        try {
+            var result = eval($('.equation').html());
+            $('.result').text(result);
+        } catch (e) {
+            if (e instanceof SyntaxError) {
+                $('.result').text("");
+            }
+        }
+
     }
 
 })

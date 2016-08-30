@@ -13,7 +13,7 @@ body{
     height: $calc_height;
     width: $calc_width;
     background-color: $lightblack;
-    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.7);
+    @include boxShadowEffect;
     &:before{
         position: absolute;
         z-index:-1;
@@ -39,7 +39,8 @@ body{
     font-weight: bold;
 }
 
-result{
+.result{
+    font-size:large;    
     font-weight: bold;
 }
 
@@ -66,6 +67,7 @@ result{
         width:30px;
         cursor:pointer;
         margin-left: 10px;
+        transition: transform 200ms ease-in-out;     
         &:before{            
             position: absolute;
             content: "";
@@ -76,6 +78,9 @@ result{
             border-top:10px solid transparent;
             border-right:10px solid $lightblack;
             border-bottom:15px solid transparent;
+        }
+        &:hover{
+            transform: scale(1.2);
         }
         span{
             position: relative;
