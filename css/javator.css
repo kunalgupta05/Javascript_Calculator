@@ -1,3 +1,4 @@
+@import 'https://fonts.googleapis.com/css?family=Orbitron';
 body {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49,12 +50,16 @@ body {
 }
 
 .equation {
+  font-family: 'Orbitron', sans-serif;
   font-size: x-large;
   font-weight: bold;
 }
 
 .result {
-  font-size: large;
+  position: relative;
+  top: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: medium;
   font-weight: bold;
 }
 

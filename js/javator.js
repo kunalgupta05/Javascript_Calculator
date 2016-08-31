@@ -60,7 +60,7 @@ $(document).ready(function () {
     function evaluateExpression() {
 
         try {
-            var result = eval($('.equation').html());
+            var result = eval($('.equation').html());            
             $('.result').text(result);
         } catch (e) {
             if (e instanceof SyntaxError) {
