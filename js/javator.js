@@ -47,7 +47,7 @@ $(document).ready(function () {
         operatorCount = 0;
         operand = false;
         $('.equation').html('').show();
-        $('.result').html('').css('font-size','large');
+        $('.result').html('').css('font-size','medium');
     });
 
     //call the evaluateExpression function when the user clicks on the equals operator.
