@@ -46,13 +46,21 @@ $(document).ready(function () {
     $('.delete').on('click', function () {       
         operatorCount = 0;
         operand = false;
-        $('.equation').html('').show();
-        $('.result').html('').css('font-size','medium');
+        $('.equation').show();
+        var text=$('.equation').html().split('');
+        text.pop();
+        $('.equation').html('').append(text);
+        if(text.length==0){
+            $('.result').text('');
+        }
+        $('.result').css('font-size','medium');
+        evaluateExpression();    
+        
     });
 
     //call the evaluateExpression function when the user clicks on the equals operator.
     $('.equals').on('click', function () {
-        $('.equation').html("").hide();        
+        $('.equation').hide();      
         $('.result').css('font-size','x-large');
     })
 
@@ -64,7 +72,7 @@ $(document).ready(function () {
             $('.result').text(result);
         } catch (e) {
             if (e instanceof SyntaxError) {
-                $('.result').text("");
+                $('.result').text("Syntax Error");
             }
         }
 
