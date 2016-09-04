@@ -3,6 +3,7 @@
 <head>
     <title>Javascript Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/javator.css">
 </head>
@@ -36,7 +37,7 @@
                     <div class="operators"><span class="subtract">-</span></div>
                 </div>
                 <div class="fourth_row_operators">
-                    <div class="delete"><span>&times</span></div>
+                    <div class="delete"><span>DEL</span></div>
                     <div class="operators"><span>0</span></div>
                     <div class="equals"><span>=</span></div>
                     <div class="operators"><span class="add">+</span></div>
@@ -44,7 +45,12 @@
             </div>
         </div>
     
-
+        <div class="tips">
+            <a href="#"><i class="glyphicon glyphicon-question-sign"></i></a>
+        </div>
+        
+      <!--Open the modal to show the tips to use the calculator app-->
+       
     <!--Scripts-->
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/javator.js"></script>

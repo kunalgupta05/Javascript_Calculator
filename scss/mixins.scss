@@ -1,7 +1,7 @@
 //Mixins
 
 @mixin CenterWithFlex{
-    display: flex;
+    display: flex;    
     align-items: center;
     justify-content: center;
 }
@@ -15,6 +15,7 @@
 }
 
 @mixin operators_styles($bgColor){
+    position: relative;
     background-color:$bgColor;
     border-radius: 50%;
     width:40px;

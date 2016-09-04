@@ -9,7 +9,16 @@ body {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: antiquewhite;
+}
+
+.tips a i {
+  padding-top: 10px;
+  font-size: x-large;
+  font-weight: bold;
 }
 
 .calculator_container {
@@ -46,10 +55,12 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   color: white;
+  width: 300px;
   padding: 10px;
 }
 
 .equation {
+  padding-left: 10px;
   font-family: 'Orbitron', sans-serif;
   font-size: x-large;
   font-weight: bold;
@@ -86,6 +97,7 @@ body {
 }
 
 .first_row_operators .operators, .second_row_operators .operators, .third_row_operators .operators, .fourth_row_operators .operators {
+  position: relative;
   background-color: #1b1919;
   border-radius: 50%;
   width: 40px;
@@ -112,6 +124,7 @@ body {
 }
 
 .first_row_operators .equals, .second_row_operators .equals, .third_row_operators .equals, .fourth_row_operators .equals {
+  position: relative;
   background-color: #06b506;
   border-radius: 50%;
   width: 40px;
@@ -138,40 +151,36 @@ body {
 }
 
 .first_row_operators .delete, .second_row_operators .delete, .third_row_operators .delete, .fourth_row_operators .delete {
+  font-size: 15px;
+  font-weight: bold;
   position: relative;
-  background-color: #1b1919;
-  width: 30px;
+  background-color: gray;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  margin-left: 10px;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
-}
-
-.first_row_operators .delete:before, .second_row_operators .delete:before, .third_row_operators .delete:before, .fourth_row_operators .delete:before {
-  position: absolute;
-  content: "";
-  right: 95%;
-  top: 0px;
-  width: 0px;
-  height: 0px;
-  border-top: 10px solid transparent;
-  border-right: 10px solid #1b1919;
-  border-bottom: 15px solid transparent;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*span{
+        position: relative;
+        top: 2px;
+        left:9px;
+    }*/
 }
 
 .first_row_operators .delete:hover, .second_row_operators .delete:hover, .third_row_operators .delete:hover, .fourth_row_operators .delete:hover {
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
-.first_row_operators .delete span, .second_row_operators .delete span, .third_row_operators .delete span, .fourth_row_operators .delete span {
-  position: relative;
-  left: 10px;
+  background-color: #9a9a9a;
 }
 
 .fourth_row_operators .operators {
+  position: relative;
   background-color: gray;
   border-radius: 50%;
   width: 40px;

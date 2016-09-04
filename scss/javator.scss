@@ -4,7 +4,19 @@
 
 body{
     @include CenterWithFlex;
+    flex-direction: column;
     background-color: antiquewhite;
+}
+
+.tips{
+    a{
+        i{
+            padding-top: 10px;
+            font-size:x-large;
+            font-weight: bold; 
+        }
+    }
+       
 }
 
 .calculator_container{
@@ -26,20 +38,21 @@ body{
 }
 
 .calculator_display_result{
-    height:0.35*$calc_height;    
+    height:0.35*$calc_height;            
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: center;    
     color:white;
-    padding: 10px;
-    
+    width: $calc_width;
+    padding:10px;    
 }
 
-.equation{
+.equation{    
+    padding-left:10px;     
     font-family: 'Orbitron', sans-serif;
     font-size: x-large;
-    font-weight: bold;
+    font-weight: bold;    
 }
 
 .result{
@@ -47,7 +60,7 @@ body{
     top: 10px;
     font-family: 'Orbitron', sans-serif;
     font-size:medium;    
-    font-weight: bold;
+    font-weight: bold;        
 }
 
 .first_row_operators,.second_row_operators,.third_row_operators,.fourth_row_operators{
@@ -67,31 +80,11 @@ body{
        @include lighten_background($lightgreen);      
     }
     
-    .delete{        
-        position: relative;
-        background-color: $lightblack;
-        width:30px;
-        cursor:pointer;
-        margin-left: 10px;
-        transition: transform 200ms ease-in-out;     
-        &:before{            
-            position: absolute;
-            content: "";
-            right: 95%;
-            top:0px;
-            width:0px;
-            height:0px;
-            border-top:10px solid transparent;
-            border-right:10px solid $lightblack;
-            border-bottom:15px solid transparent;
-        }
-        &:hover{
-            transform: scale(1.2);
-        }
-        span{
-            position: relative;
-            left:10px;
-        }        
+    .delete{
+        font-size: 15px;
+        font-weight: bold;        
+       @include operators_styles(gray);
+       @include lighten_background(gray);
     }          
 }
 
