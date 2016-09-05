@@ -9,50 +9,77 @@
 </head>
 
 <body>
-    
-        <div class="calculator_container">
-           
-            <div class="calculator_display_result">
-                <div class="equation"></div>
-                <div class="result"></div>
+
+    <div class="calculator_container">
+
+        <div class="calculator_display_result">
+            <div class="equation"></div>
+            <div class="result"></div>
+        </div>
+
+        <div class="calculator_functions">
+            <div class="first_row_operators">
+                <div class="operators"><span>7</span></div>
+                <div class="operators"><span>8</span></div>
+                <div class="operators"><span>9</span></div>
+                <div class="operators"><span class="divide">&divide</span></div>
             </div>
-            
-            <div class="calculator_functions">
-                <div class="first_row_operators">
-                    <div class="operators"><span>7</span></div>
-                    <div class="operators"><span>8</span></div>
-                    <div class="operators"><span>9</span></div>
-                    <div class="operators"><span class="divide">&divide</span></div>
+            <div class="second_row_operators">
+                <div class="operators"><span>4</span></div>
+                <div class="operators"><span>5</span></div>
+                <div class="operators"><span>6</span></div>
+                <div class="operators"><span class="multiply">&times</span></div>
+            </div>
+            <div class="third_row_operators">
+                <div class="operators"><span>1</span></div>
+                <div class="operators"><span>2</span></div>
+                <div class="operators"><span>3</span></div>
+                <div class="operators"><span class="subtract">-</span></div>
+            </div>
+            <div class="fourth_row_operators">
+                <div class="delete"><span>DEL</span></div>
+                <div class="operators"><span>0</span></div>
+                <div class="equals"><span>=</span></div>
+                <div class="operators"><span class="add">+</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tips">
+        <a href="#"><i class="glyphicon glyphicon-question-sign"></i></a>
+    </div>
+
+    <!--Open the modal to show the tips to use the calculator app-->
+    <div class="modal fade" id="tips_modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title text-center">TIPS FOR USING JAVATOR!</h3>
                 </div>
-                <div class="second_row_operators">
-                    <div class="operators"><span>4</span></div>
-                    <div class="operators"><span>5</span></div>
-                    <div class="operators"><span>6</span></div>
-                    <div class="operators"><span class="multiply">&times</span></div>
+                <div class="modal-body">
+                    <ul class="tips_list">
+                        <li>This calculator takes both input from clicking the buttons as well as from the keyboard.Give it a
+                            go!
+                        </li>
+                        <li>You can use operators both from the numpad as well using the (shiftKey+desired_operator).For example
+                            shiftKey+8 results into 'X'(multiply) operator</li>
+                        <li>This calculator can calculate only upto maximum safe integer of number type in javascript i.e 9007199254740991
+                            or (2)<sup>^53</sup>-1.</li>
+                        <li>Lastly enjoy using the calculator app, any short comings will be eradicated in the version 2 of the
+                            app with more functionality and bigger range</li>
+                    </ul>
                 </div>
-                <div class="third_row_operators">
-                    <div class="operators"><span>1</span></div>
-                    <div class="operators"><span>2</span></div>
-                    <div class="operators"><span>3</span></div>
-                    <div class="operators"><span class="subtract">-</span></div>
-                </div>
-                <div class="fourth_row_operators">
-                    <div class="delete"><span>DEL</span></div>
-                    <div class="operators"><span>0</span></div>
-                    <div class="equals"><span>=</span></div>
-                    <div class="operators"><span class="add">+</span></div>
+                <div class="modal-footer">
+                      <div class="text-center">Copyright &copy 2016 Kunal Gupta</div>
                 </div>
             </div>
         </div>
-    
-        <div class="tips">
-            <a href="#"><i class="glyphicon glyphicon-question-sign"></i></a>
-        </div>
-        
-      <!--Open the modal to show the tips to use the calculator app-->
-       
+    </div>
+
+
     <!--Scripts-->
     <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/javator.js"></script>
 </body>
 

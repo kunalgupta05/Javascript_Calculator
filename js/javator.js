@@ -140,6 +140,11 @@ $(document).ready(function () {
 
         $('.result').css('font-size', 'medium');
     }
+    
+    
+    $('.tips').click(function(){
+        $('#tips_modal').modal('show'); 
+    });
 
     //This function does the magic of making the evaluated answer more prominent and hiding the equation forming display
     function equals() {

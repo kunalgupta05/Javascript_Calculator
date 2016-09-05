@@ -206,3 +206,11 @@ body {
 .fourth_row_operators .operators:hover {
   background-color: #9a9a9a;
 }
+
+.modal-footer, .modal-header {
+  font-weight: bold;
+}
+
+.tips_list > li {
+  padding: 10px;
+}
