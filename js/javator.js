@@ -49,10 +49,10 @@ $(document).ready(function () {
 
 
     //Function which accepts user input via keyboard
-    $(document).keyup(function (e) {                        
+    $(document).keyup(function (e) {
         $('.equation').show();
         $('.result').css('font-size', 'medium');
-                                       
+
         if (e.shiftKey) {
             if (e.which == 56) {
                 operatorCount++;
@@ -66,7 +66,7 @@ $(document).ready(function () {
                 operatorCount++;
                 checkOperand("+");
             }
-             if (e.which == 191) {
+            if (e.which == 191) {
                 operatorCount++;
                 checkOperand("/");
             }
@@ -140,10 +140,10 @@ $(document).ready(function () {
 
         $('.result').css('font-size', 'medium');
     }
-    
-    
-    $('.tips').click(function(){
-        $('#tips_modal').modal('show'); 
+
+
+    $('.tips').click(function () {
+        $('#tips_modal').modal('show');
     });
 
     //This function does the magic of making the evaluated answer more prominent and hiding the equation forming display
