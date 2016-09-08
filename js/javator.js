@@ -35,7 +35,7 @@ $(document).ready(function () {
             operand = true;
             if ($(this).find('span').hasClass('subtract')) {
                 operatorCount++;
-                checkOperand("-", true);
+                checkOperand("-");
             }
             else {
                 operatorCount = 0;
@@ -86,7 +86,7 @@ $(document).ready(function () {
         else if (e.which == 13) {
             equals();
         }
-        else if (e.which == 46) {
+        else if (e.which == 46) {            
             deleted();
         }
         else {
@@ -135,13 +135,14 @@ $(document).ready(function () {
             if (text.length == 0) {
                 $('.result').text('');
             }
+            operand=true;
             evaluateExpression();
         }
 
         $('.result').css('font-size', 'medium');
     }
 
-
+    //Show the modal containing tips to the user when they click on the tips icon
     $('.tips').click(function () {
         $('#tips_modal').modal('show');
     });
