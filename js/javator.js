@@ -13,7 +13,7 @@ $(document).ready(function () {
         }
     }
 
-    //Append the text to calculator_result_display except for delete and equals signs. 
+    //Append the text to calculator_result_display except for delete and equals signs.
     $('.operators').on('click', function () {
 
         $('.equation').show();
@@ -48,7 +48,7 @@ $(document).ready(function () {
     });
 
 
-    //Function which accepts user input via keyboard
+    //Function which accepts input from the user via keyboard
     $(document).keyup(function (e) {
         $('.equation').show();
         $('.result').css('font-size', 'medium');
