@@ -48,7 +48,7 @@ $(document).ready(function () {
     });
 
 
-    //Function which accepts input from the user via keyboard
+    //Function which accepts input from the user via keyboard.
     $(document).keyup(function (e) {
         $('.equation').show();
         $('.result').css('font-size', 'medium');
